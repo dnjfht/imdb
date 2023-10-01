@@ -7,19 +7,19 @@ import { MdLightMode } from "react-icons/md";
 export default function DarkModeSwitch() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  console.log(theme);
+
   return (
     <>
       {currentTheme === "dark" ? (
         <MdLightMode
-          className="text-xl cursor-pointer hover:text-amber-500"
+          className="text-xl cursor"
           onClick={() => {
             setTheme("light");
           }}
         />
       ) : (
         <MdDarkMode
-          className="text-xl cursor-pointer hover:text-amber-500"
+          className="text-xl cursor"
           onClick={() => {
             setTheme("dark");
           }}
