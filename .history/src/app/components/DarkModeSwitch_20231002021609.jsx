@@ -12,6 +12,7 @@ export default function DarkModeSwitch() {
   useEffect(() => setMounted(true), []);
 
   const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log(theme, systemTheme, currentTheme);
 
   return (
     <>
