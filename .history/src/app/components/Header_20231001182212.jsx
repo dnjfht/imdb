@@ -13,7 +13,7 @@ export default function Header() {
         <MenuItem title="ABOUT" address="/about" Icon={HiInformationCircle} />
       </div>
 
-      <div className="flex items-center space-x-5">
+      <div className="flex items-center">
         <DarkModeSwitch />
 
         <Link href="/">

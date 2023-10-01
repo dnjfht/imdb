@@ -13,10 +13,9 @@ export default function Header() {
         <MenuItem title="ABOUT" address="/about" Icon={HiInformationCircle} />
       </div>
 
-      <div className="flex items-center space-x-5">
-        <DarkModeSwitch />
-
+      <div>
         <Link href="/">
+          <DarkModeSwitch />
           <h2 className="text-2xl">
             <span className="font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1">
               IMDb
