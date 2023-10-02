@@ -18,7 +18,7 @@ export default function Header() {
 
         <Link href="/">
           <h2 className="text-2xl">
-            <span className="font-bold bg-emerald-400 py-1 px-2 rounded-lg mr-1">
+            <span className="font-bold bg-emerald-500 py-1 px-2 rounded-lg mr-1">
               IMDb
             </span>
             <span className="text-xl hidden sm:inline">Clone</span>
