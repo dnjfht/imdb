@@ -1,4 +1,4 @@
-import MovieCards from "./components/MovieCards";
+import { revalidateTag } from "next/cache";
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -13,20 +13,12 @@ export default async function Home({ searchParams }) {
     { next: { revalidate: 10000 } }
   );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+  console.log(res);
 
   const data = await res.json();
   // data.results에 배열로 값이 들어 있음.
   const results = data.results;
-  // console.log(results);
+  console.log(results);
 
-  return (
-    <div className="max-w-6xl sm:mx-auto p-4 space-y-4">
-      {results?.map((movie) => {
-        return <MovieCards key={movie.id} movie={movie} />;
-      })}
-    </div>
-  );
+  return <div className="max-w-6xl sm:mx-auto p-4 space-y-4">HOME</div>;
 }

@@ -1,3 +1,4 @@
+import { revalidateTag } from "next/cache";
 import MovieCards from "./components/MovieCards";
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -24,8 +25,8 @@ export default async function Home({ searchParams }) {
 
   return (
     <div className="max-w-6xl sm:mx-auto p-4 space-y-4">
-      {results?.map((movie) => {
-        return <MovieCards key={movie.id} movie={movie} />;
+      {results?.map((result) => {
+        return <MovieCards key={result.id} />;
       })}
     </div>
   );

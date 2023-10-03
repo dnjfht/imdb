@@ -1,3 +1,4 @@
+import { revalidateTag } from "next/cache";
 import MovieCards from "./components/MovieCards";
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
