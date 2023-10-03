@@ -8,11 +8,9 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="text-center mt-10">
+    <div className="max-w-6xl sm:mx-auto p-4 space-y-4">
       <h1>Something went wrong</h1>
-      <button className="hover:text-emerald-400" onClick={() => reset()}>
-        Try Again
-      </button>
+      <button onClick={() => reset()}>Try Again</button>
     </div>
   );
 }
