@@ -21,7 +21,7 @@ export default async function Home({ searchParams }) {
   const results = data.results;
 
   return (
-    <div className="px-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4">
+    <div className="px-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4 mt-0">
       {results?.map((movie) => {
         return <MovieCards key={movie.id} movie={movie} />;
       })}
