@@ -8,7 +8,7 @@ export default function MovieCards({ movie }) {
     <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 mb-10 group">
       <Link href={`/movie/${movie.id}`}>
         <Image
-          className="w-[120%] max-w-full h-auto object-cover sm:mb-0 mb-4 sm:rounded-t-lg rounded-t-xl group-hover:opacity-80 transition-opacity duration-500 mx-auto"
+          className="w-[120%] max-w-full h-auto object-cover sm:mb-0 mb-4 rounded-t-lg group-hover:opacity-80 transition-opacity duration-500 mx-auto"
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
