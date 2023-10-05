@@ -25,9 +25,9 @@ export default function MovieCards({ movie }) {
           <h2 className="truncate text-lg font-bold">
             {movie.title || movie.name}
           </h2>
-          <p className="flex items-center">
+          <p>
             {movie.release_date || movie.first_air_date}
-            <PiThumbsUpDuotone className="h-5 mr-1 ml-3" />
+            <PiThumbsUpDuotone />
             {movie.vote_count}
           </p>
         </div>

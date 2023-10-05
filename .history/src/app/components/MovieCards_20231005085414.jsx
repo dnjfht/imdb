@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { PiThumbsUpDuotone } from "react-icons/pi";
-
 export default function MovieCards({ movie }) {
   return (
     <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 group">
@@ -21,15 +19,9 @@ export default function MovieCards({ movie }) {
 
         <div>
           <p className="line-clamp-2 text-md">{movie.overview}</p>
-          {/* truncate : 글자를 한 줄로 유지하는 tailwind css 명령어 */}
-          <h2 className="truncate text-lg font-bold">
-            {movie.title || movie.name}
-          </h2>
-          <p className="flex items-center">
-            {movie.release_date || movie.first_air_date}
-            <PiThumbsUpDuotone className="h-5 mr-1 ml-3" />
-            {movie.vote_count}
-          </p>
+          <h2>{movie.title || movie.name}</h2>
+          <p>{movie.release_date}</p>
+          <p>{movie.vote_count}</p>
         </div>
       </Link>
     </div>

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { PiThumbsUpDuotone } from "react-icons/pi";
-
 export default function MovieCards({ movie }) {
   return (
     <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 group">
@@ -20,16 +18,10 @@ export default function MovieCards({ movie }) {
         />
 
         <div>
-          <p className="line-clamp-2 text-md">{movie.overview}</p>
-          {/* truncate : 글자를 한 줄로 유지하는 tailwind css 명령어 */}
-          <h2 className="truncate text-lg font-bold">
-            {movie.title || movie.name}
-          </h2>
-          <p className="flex items-center">
-            {movie.release_date || movie.first_air_date}
-            <PiThumbsUpDuotone className="h-5 mr-1 ml-3" />
-            {movie.vote_count}
-          </p>
+          <p>{shortenText(movie.overview, 32)}</p>
+          <h1>{movie.title}</h1>
+          <p>{movie.release_date}</p>
+          <p>{movie.vote_count}</p>
         </div>
       </Link>
     </div>
@@ -46,9 +38,7 @@ export default function MovieCards({ movie }) {
 //     require('@tailwindcss/line-clamp'),
 //   ],
 // }
-// 그리고 className="line-clamp-2" 이런 식으로 선언해주면 됨. 2줄 단축 예시임.
 
-// 아니면 함수를 직접 만들어도 됨. 근데 이렇게 해주면 화면 해상도에 따라 줄이 달라짐.
-// export function shortenText(text, num) {
-//   return text.slice(0, num) + "...";
-// }
+export function shortenText(text, num) {
+  return text.slice(0, num) + "...";
+}
