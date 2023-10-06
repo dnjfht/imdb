@@ -4,7 +4,7 @@ export default async function SearchPage(props) {
   console.log(props.params.searchTerm);
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${props.params.searchTerm}&language=en-US&include_adult=false`
+    `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_API_KEY}&query=${props.params.searchTerm}&language=en-US&include_adult=false`
   );
 
   if (!res.ok) {
